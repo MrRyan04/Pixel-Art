@@ -1,18 +1,44 @@
 
-name: Firebase Deploy
+name: Pixel Art CI/CD
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
-  id-token: write
 
 jobs:
-  deploy:
+  ci:
+    name: Integracao Continua
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo do repositorio
+        uses: actions/checkout@v7
+
+      - name: Verificar arquivos essenciais
+        run: |
+          test -f index.html
+          test -f firebase.json
+          test -d assets
+
+      - name: Verificar sintaxe JavaScript
+        run: node --check assets/js/canva.js
+
+  deploy:
+    name: Deploy no Firebase
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Baixar codigo do repositorio
