@@ -1,0 +1,111 @@
+.conteiner{
+    position: relative;
+    margin: auto;
+    display: none;
+}
+
+.conteiner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(to bottom, rgb(255, 255, 255) 1px, rgba(255, 255, 255, 0) 1px);
+    background-size: var(--pixel) var(--pixel);
+}
+
+#canva{
+    height: 100%;
+    width: 100%;
+    image-rendering: pixelated;
+    background-color: rgba(168, 162, 162, 0.81);
+    touch-action: pinch-zoom;
+
+}
+
+#paleta{
+    display: none;
+}
+
+#paletabalde{
+    display: none;
+}
+
+#botoes{
+  width: 300px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  display: none;
+}
+
+#pincel{
+  display: inline-block;
+  width: 50px;
+  border-radius: 10px;
+}
+
+#borracha{
+  display: inline-block;    
+  width: 50px;
+  border-radius: 10px;
+}
+
+#balde{
+  display: inline-block;    
+  width: 50px;
+  border-radius: 10px;
+}
+
+#grade{
+  display: inline-block;    
+  width: 50px;
+  border-radius: 10px;
+}
+
+#downpng{
+  display: inline-block;    
+  width: 70px;
+  border-radius: 10px;
+}
+
+#json{
+  display: inline-block;    
+  width: 50px;
+  border-radius: 10px;
+}
+
+#tamanho{
+  width: 310px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  display: none;
+}
+
+.botgrid{
+    width: 100px;
+    height: 70px;
+    border-radius: 20%;
+}
+
+#plataforma{
+  width: 200px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.plat{
+    width: 100px;
+    height: 70px;
+    border-radius: 20%;
+}
+
+.titulo{
+  text-align: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXEL-ART</title>
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h1 class="titulo">CRIADOR DE PIXEL-ART</h1>
+    <div class="conteiner">
+        <canvas id="canva">
+        </canvas>
+    </div>
+
+    <div id="botoes">
+    <input type="color" id="paleta">
+    <button id="pincel" title="Pincel">🖌️</button>
+    <button id="borracha" title="Borracha">🧽</button>
+    <button id="balde" title="Balde">🪣</button>
+    <button id="grade" title="Linhas de grade">🪟</button>
+    <button id="downpng" title="Download PNG">⬇️🖼️</button>
+    <button id="json" title="Download Json">⬇️{}</button>
+    <input type="color" id="paletabalde">
+    </div>
+
+    <h2 class="titulo" id="titulo2">Escolha a plataforma</h2>
+    <div id="tamanho">
+    <button class="botgrid" id="bot1">64x64</button>
+    <button class="botgrid" id="bot2">32x32</button>
+    <button class="botgrid" id="bot3">16x16</button>
+    </div>
+
+    <div id="plataforma">
+    <button id="cell" class="plat">Mobile</button>
+    <button id="pc" class="plat">PC</button>
+    </div>
+
+    <script src="assets/js/canva.js"></script>
+
+    <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyADNbWVW0lnAeH3FN7_Ot2j_w_yLrPwfZQ",
+        authDomain: "pixel-art-creator-2026.firebaseapp.com",
+        projectId: "pixel-art-creator-2026",
+        storageBucket: "pixel-art-creator-2026.firebasestorage.app",
+        messagingSenderId: "997106993276",
+        appId: "1:997106993276:web:8a979db1fce1e0481ae1f9",
+        measurementId: "G-PSJ9TXNLJX"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    </script>
+
+
+</body>
+</html>
