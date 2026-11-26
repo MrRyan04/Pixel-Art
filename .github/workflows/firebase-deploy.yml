@@ -1,0 +1,13 @@
+name: Firebase Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Teste da pipeline
+        run: echo "Pipeline iniciada com sucesso!"
